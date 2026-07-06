@@ -29,5 +29,7 @@ end
 
 vim.g.deprecation_warnings = false
 
+-- completely silences the hardcoded lspconfig framework deprecation banner warning
+vim.env.NVIM_LSPCONFIG_SUPPRESS_DEPRECATION = "1"
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!

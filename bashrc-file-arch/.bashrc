@@ -1,4 +1,4 @@
-# ~/.bashrc ts
+# ~/.bashrc
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -37,3 +37,7 @@ fi
 
 # 6. PATH
 export PATH=\"$PATH:/usr/local/MATLAB/R2025b/bin\"
+alias matlab="/usr/local/MATLAB/R2025b/bin/matlab"
+
+alias postman="/snap/bin/postman --disable-gpu --disable-hardware-acceleration"
+export NVIM_LSPCONFIG_SUPPRESS_DEPRECATION=1
