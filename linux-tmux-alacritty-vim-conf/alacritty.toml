@@ -1,0 +1,65 @@
+# WINDOW CONFIGURATION
+[window]
+# Set the background opacity (0.8 = 80% opaque, 20% transparent).
+opacity = 0.99
+
+# set defualt window dimensions in columns (width) and lines (height).
+# making the app window of alacritty bigger when opened
+[window.dimensions]
+columns = 150
+lines = 35
+
+[window.padding]
+x = 5
+y = 5
+
+# FONT SETTINGS
+[font]
+size = 12.0
+
+[font.normal]
+
+family = "JetBrainsMono Nerd Font Mono"
+# JetBrainsMono Nerd Font Mono
+# Monospace
+
+# COLORS
+[colors.primary]
+# Foreground (text) color for the default dark theme.
+foreground = "0xd8d8d8"
+# Background color for the default dark theme.
+background = "0x1d1f21"
+
+[colors.cursor]
+cursor = "#ff7600"
+
+# CURSOR APPEARANCE
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+# Choose the cursor style: 'Block', 'Underline', or 'Beam'.
+shape = "Block"
+blinking = "On"
+
+# SCROLLBACK
+[scrolling]
+# Maximum number of lines in the scrollback buffer.
+history = 100000
+
+# ENVIRONMENT
+[env]
+# Setting TERM is correct for best compatibility with Tmux and other tools.
+TERM = "alacritty"
+
+# KEYBOARD BINDINGS
+[keyboard]
+bindings = [
+  # Spawn a new Alacritty window in the current working directory.
+  # Key combination: Ctrl + Shift + Enter
+  { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" },
+
+  # Open the configuration file for quick editing (Ctrl + Shift + O)
+  # This uses the default application set for .toml files (like Konsole's editor or VS Code)
+  # { key = "O", mods = "Control|Shift", action = "OpenConfiguration" },
+]

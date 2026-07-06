@@ -1,0 +1,1 @@
+## Minimal  settings without plugings

@@ -1,0 +1,53 @@
+# ENVIRONMENT / SHELL CONFIGURATION
+[terminal.shell]
+program = "wsl.exe"
+args = ["-d", "Arch", "--cd", "~"]
+
+# WINDOW CONFIGURATION
+[window]
+opacity = 1
+
+[window.dimensions]
+columns = 150
+lines = 35
+
+[window.padding]
+x = 5
+y = 5
+
+# FONT SETTINGS
+[font]
+size = 12.0
+
+[font.normal]
+family = "FiraCode Nerd Font Mono"  # JetbrainsMonoNL Nerd Font, Consolas, FiraCode Nerd Font Mono
+
+# COLORS
+[colors.primary]
+foreground = "0xd8d8d8"
+background = "0x1d1f21"
+
+[colors.cursor]
+cursor = "#ffffff"
+
+# CURSOR APPEARANCE
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+shape = "Block" # Underline, Block or Beam 
+blinking = "On"
+
+# SCROLLBACK
+[scrolling]
+history = 100000
+
+# ENVIRONMENT VARIABLES
+[env]
+TERM = "alacritty"
+
+# KEYBOARD BINDINGS
+[[keyboard.bindings]]
+key = "Return"
+mods = "Control|Shift"
+action = "CreateNewWindow"

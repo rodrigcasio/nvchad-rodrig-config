@@ -1,0 +1,17 @@
+debtap
+epson-inkjet-printer-escpr
+gns3-gui
+gns3-server
+needrestart
+neofetch
+opentabletdriver-git
+packettracer
+postman-bin
+python-pyqt5-extra-modules
+python312
+qt5-location
+spotify
+ttf-ms-fonts
+visual-studio-code-bin
+yay
+yay-debug

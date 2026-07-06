@@ -1,0 +1,7 @@
+Need to do when moving to a new computer or reinstall Arch
+
+-- To reinstall Offical Packages
+sudo pacman -S --needed - < pacman_packages_2026.txt
+
+-- To reinstall AUR Packages (Yay)
+yay -S --needed - < yay_packages_2026.txt
