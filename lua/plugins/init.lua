@@ -5,11 +5,25 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require "configs.lspconfig"
+      -- 1. Load NvChad's base LSP configurations first
+      require("nvchad.configs.lspconfig").defaults()
+
+      local lspconfig = require "lspconfig"
+
+      -- 2. List all the language servers you want active
+      local servers = { "html", "cssls", "clangd" }
+
+      -- 3. Loop through the servers and initialize them with NvChad defaults
+      for _, lsp in ipairs(servers) do
+        lspconfig[lsp].setup {
+          on_attach = require("nvchad.configs.lspconfig").on_attach,
+          on_init = require("nvchad.configs.lspconfig").on_init,
+          capabilities = require("nvchad.configs.lspconfig").capabilities,
+        }
+      end
     end,
   },
 
@@ -26,3 +40,4 @@ return {
   -- 	},
   -- },
 }
+
