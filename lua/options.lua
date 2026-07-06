@@ -27,5 +27,7 @@ if vim.fn.has("wsl") == 1 then
   }
 end
 
+vim.g.deprecation_warnings = false
+
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
