@@ -24,15 +24,26 @@ alias mv='mv -i'
 alias g++17='g++ -std=c++17'
 
 # ------------------------------
-# 3. PROMPT CONFIGURATION (Blue Style)
+# 3. PROMPT CONFIGURATION (Custom Git Style)
 # ------------------------------
-# %n=user, %m=host, %1~=current folder, %#=prompt symbol
-PROMPT='%F{blue}%n%f@%m [%F{blue}%1~%f]%# '
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the git output: (branch_name)
+zstyle ':vcs_info:git:*' formats '%F{yellow}(%b)%f'
+
+# Enable prompt substitution so variables inside PROMPT update dynamically
+setopt prompt_subst
+
+# Custom prompt layout: rodcasio[directory](branch)$
+PROMPT='rodcasio[%F{blue}%1~%f]${vcs_info_msg_0_}%# '
 
 # ------------------------------
 # 4. COMPLETION & PLUGINS
 # ------------------------------
 # Native Zsh autocompletion
+#
 # This replaces the bash_completion logic from your Arch file
 
 # Load NVM (Node Version Manager)
